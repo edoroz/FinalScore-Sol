@@ -11,6 +11,9 @@ function CargarEquipos() {
         .then(result => {
             const equipos = result.data;
             const list = document.getElementById("equipoList");
+            const titles = document.createElement("div");
+            titles.textContent = 'Equipo\t\tParque\t\t\tCiudad\t\t\tLiga';
+            list.appendChild(titles);
 
             equipos.forEach(equipo => {
                 const item = document.createElement("div");
