@@ -9,5 +9,7 @@ using System.Threading.Tasks;
 namespace FinalScore_Core.IRepositories {
     public interface IEquipoRepository : IRepository<EquipoModel> {
         void Update(EquipoModel equipo);
+        
+        IEnumerable<Object> GetAllEquipos();
     }
 }

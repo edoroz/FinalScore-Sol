@@ -40,7 +40,7 @@ namespace FinalScore_Data.Models {
         public string   URLs    { get; set; } = string.Empty;
 
         public int      LigaId  { get; set; }   [ForeignKey("LigaId")]
-        public LigaModel? Liga  { get; set; }
+        public LigaModel  Liga  { get; set; } = new LigaModel();
 
         public ICollection<JugadorModel>? Jugadores { get; set; }
     }

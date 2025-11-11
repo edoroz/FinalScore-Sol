@@ -17,7 +17,7 @@ namespace FinalScore_Web.Areas.Admin.Controllers {
         }
                                                                 [HttpGet]
         public IActionResult GetAll() { 
-            var result = Json(new { data = _workUnit.Equipo.GetAll(includeProps:"Liga") });
+            var result = Json(new { data = _workUnit.Equipo.GetAllEquipos() });
             return result;
         }
     }
