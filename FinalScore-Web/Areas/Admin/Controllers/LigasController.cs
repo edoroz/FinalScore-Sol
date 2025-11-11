@@ -11,11 +11,11 @@ namespace FinalScore_Web.Areas.Admin.Controllers {
         public LigasController(IWorkUnit workUnit) {
             _workUnit = workUnit;
         }       
-        [HttpGet]
+                                                                [HttpGet]
         public IActionResult Index() {
             return View();
         }
-        [HttpGet]
+                                                                [HttpGet]
         public IActionResult GetAll() {
             var result = Json(new { data = _workUnit.Liga.GetAll() });
             return  result;
