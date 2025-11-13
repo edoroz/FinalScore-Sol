@@ -29,16 +29,12 @@ namespace FinalScore_Core.Repositories {
                     e.Nombre,
                     e.Parque,
                     e.Ciudad,
-                    liga = new {
-                        e.Liga.Nombre,
-                        e.Liga.Pais
-                    }
+                    liga = e.Liga.Desc +' '+  e.Liga.Nombre,
+                    pais = e.Liga.Pais
                 });
             return equipos;
         }
-
-        
+                
     }
-
 
 }

@@ -12,12 +12,12 @@ function CargarEquipos() {
             const equipos = result.data;
             const list = document.getElementById("equipoList");
             const titles = document.createElement("div");
-            titles.textContent = 'Equipo\t\tParque\t\t\tCiudad\t\t\tLiga\t\t\tPaís';
+            titles.textContent = 'Equipo\t\tParque\t\t\tCiudad\t\t\tLiga\t\t\tDesc';
             list.appendChild(titles);
 
             equipos.forEach(equipo => {
                 const item = document.createElement("div");
-                item.textContent = `${equipo.nombre}\t${equipo.parque}\t\t${equipo.ciudad}\t\t${equipo.liga.nombre}\t\t${equipo.liga.pais}`;
+                item.textContent = `${equipo.nombre}\t${equipo.parque}\t\t${equipo.ciudad}\t\t${equipo.liga}\t\t${equipo.pais}`;
                 list.appendChild(item);
             });
         })
